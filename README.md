@@ -1,2 +1,3 @@
-# PROYECTO 1_GRUPO3
- Programa para renombrar archivos
+# PROYECTO_2_GRUPO_3
+ Programa para  control de  carwash
+ 
