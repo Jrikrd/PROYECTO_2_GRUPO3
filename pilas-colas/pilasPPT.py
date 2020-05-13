@@ -9,6 +9,8 @@ Historial = deque()
 while Ciclo:
     respuesta_pc = randint(1, 3) # 1 piedra 2 papel 3 tijera
     os.system("cls")
+    print ("****************** Bienvenidos *********************")
+    print ("************ Juego Piedra, Papel o Tijera **********")
     print ("Ingrese su opción: ") #Menu para selección del jugador
     print ("1. Piedra")
     print ("2. Papel")
@@ -56,3 +58,33 @@ while Ciclo:
     else:
         print("Escriba un opción válida")
         os.system("pause")
+
+    CicloMenu = True #Ciclo de menu 
+    while CicloMenu:
+        os.system("cls")
+        print("Deseas?") #Menu
+        print("1. Volver a jugar")
+        print("2. Ver Resultado Anterior")
+        print("3. Salir")
+        Menu = int(input())
+
+        if Menu == 1:
+            CicloMenu = False
+        elif Menu == 2:
+            os.system("cls")
+            if len(Historial) > 0: #Mostrar el historial almacenado
+                Ultima = Historial.pop()
+                for elem in Ultima:
+                    print(elem)
+
+                os.system("pause")
+            else:
+                print("¡El historial esta vacio!")
+                os.system("pause")    
+        elif Menu == 3: #Finalizar el juego
+            CicloMenu = False
+            Ciclo = False  
+
+        else:
+            print("Ingrese un Valor Correcto")
+            os.system("pause")         
