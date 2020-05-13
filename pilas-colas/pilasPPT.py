@@ -1,4 +1,3 @@
-
 import os #Libreria para funciones de limpiar pantalla y pausa
 from random import randint #Libreria para generar opcion aleatoria de la computadora
 # importar el tipo de dato para utilizar pilas y colas
@@ -31,6 +30,21 @@ while Ciclo:
             PC = "Computadora: Papel"
         elif respuesta_pc == 3:
             PC = "Computadora: Tijera"
+
+        if respuesta_pc == Opcion: #Resultados del juego
+            Resultado = "Resultado: ¡Empate!"
+        if respuesta_pc == 1 and Opcion == 2:
+            Resultado = "Resultado: ¡Gana Jugador!"    
+        if respuesta_pc == 1 and Opcion == 3:
+            Resultado = "Resultado: ¡Gana Computadora!"
+        if respuesta_pc == 2 and Opcion == 1:
+            Resultado = "Resultado: ¡Gana Computadora!"
+        if respuesta_pc == 2 and Opcion == 3:
+            Resultado = "Resultado: ¡Gana Jugador!"
+        if respuesta_pc == 3 and Opcion == 1:
+            Resultado = "Resultado: ¡Gana Jugador!"
+        if respuesta_pc == 3 and Opcion == 2:
+           Resultado = "Resultado: ¡Gana Computadora!"
 
         print(Jugador) #Mostrar resultados en pantalla
         print(PC)
